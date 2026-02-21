@@ -1,0 +1,1115 @@
+:root {
+    /* Royal Indian Theme Palette */
+    --ivory-main: #FFF8E7;
+    /* Beautiful soft cream/ivory */
+    --ivory-dark: #F5E6CC;
+    --maroon-primary: #800000;
+    /* Deep Royal Maroon */
+    --maroon-light: #A52A2A;
+    --gold-primary: #D4AF37;
+    /* Royal Metallic Gold */
+    --gold-shiny: #FADA5E;
+    --text-dark: #3E2723;
+    /* Deep brown instead of black for softness */
+    --text-light: #FFF8E7;
+
+    /* Premium Fonts */
+    --font-heading: 'Tagesschrift', serif;
+    /* Exquisite Stylish Calligraphy */
+    --font-amita: 'Dekko', cursive;
+    --font-shloka: 'Tiro Devanagari Marathi', serif;
+    --font-marathi-body: 'Exile', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: var(--font-marathi-body);
+    background-color: var(--ivory-main);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+/* Background Patterns */
+.bg-ivory {
+    background-color: var(--ivory-main);
+    color: var(--text-dark);
+}
+
+.bg-maroon {
+    background-color: var(--maroon-primary);
+    color: var(--text-light);
+}
+
+.text-ivory {
+    color: var(--ivory-main) !important;
+}
+
+.text-maroon {
+    color: var(--maroon-primary) !important;
+}
+
+.text-gold {
+    color: var(--gold-primary) !important;
+}
+
+.text-dark {
+    color: var(--text-dark) !important;
+}
+
+.pattern-bg {
+    position: relative;
+}
+
+.pattern-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Subtle Damask/Mandala pattern over Ivory */
+    background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M60 30 C75 15, 100 15, 110 30 C120 45, 110 75, 60 110 C10 75, 0 45, 10 30 C20 15, 45 15, 60 30 Z' fill='%23800000' fill-opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+}
+
+.pattern-bg>* {
+    position: relative;
+    z-index: 1;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.p-4 {
+    padding: 1.5rem;
+}
+
+.text-sm {
+    font-size: 0.95rem;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+/* Premium Typography Classes */
+.marathi-title {
+    font-family: var(--font-heading);
+    color: var(--maroon-primary);
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.marathi-text {
+    font-family: var(--font-marathi-body);
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+
+.marathi-date {
+    font-family: var(--font-heading);
+    color: var(--maroon-light);
+    font-size: 2rem;
+}
+
+.marathi-chant {
+    font-family: var(--font-shloka);
+    font-size: 2rem;
+    color: var(--maroon-primary);
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.marathi-chant-sub {
+    font-family: var(--font-shloka);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.marathi-subtitle {
+    font-family: var(--font-marathi-body);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--maroon-light);
+}
+
+.section-title {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.divider {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    height: 3px;
+    width: 120px;
+    background: linear-gradient(to right, transparent, var(--gold-primary), transparent);
+    margin: 0 20px;
+}
+
+.theme-icon {
+    color: var(--gold-primary);
+    font-size: 2rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    padding: 3rem 2rem 6rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Soft, luxurious gradient background for a royal feel */
+    background: radial-gradient(circle at 50% 10%, var(--ivory-main) 0%, #FAEDD9 40%, rgba(212, 175, 55, 0.1) 100%);
+    overflow: hidden;
+}
+
+.top-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(to right, var(--maroon-primary), var(--gold-primary), var(--maroon-primary));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+}
+
+.ganesh-vandana {
+    margin-bottom: 3rem;
+    animation: dropIn 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Big, Beautiful Ganesha Icon */
+.ganesh-icon-god {
+    width: 220px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0px 8px 15px rgba(128, 0, 0, 0.2));
+    animation: subtleFloat 6s ease-in-out infinite alternate;
+}
+
+.names-wrapper {
+    position: relative;
+    padding: 2rem 0;
+    margin: 2rem 0;
+}
+
+.names-wrapper::before,
+.names-wrapper::after {
+    content: '❁';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gold-primary);
+    font-size: 2rem;
+}
+
+.names-wrapper::before {
+    top: -10px;
+}
+
+.names-wrapper::after {
+    bottom: -10px;
+}
+
+.names-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.names {
+    font-family: var(--font-heading);
+    font-size: 6.5rem;
+    color: var(--maroon-primary);
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+    line-height: 1.1;
+    animation: elegantEmerge 2s ease-out forwards;
+}
+
+.ampersand {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--gold-primary);
+    animation: pulseGlow 3s infinite;
+}
+
+/* Grand Cinematic Procession Styling */
+.grand-procession-wrapper {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 4rem;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, transparent, rgba(128, 0, 0, 0.03), transparent);
+}
+
+.procession-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.custom-procession-scene {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    animation: cinematicSweep 20s linear infinite;
+}
+
+.walker {
+    animation: walkBounce 1s ease-in-out infinite alternate;
+}
+
+.band-member {
+    width: 60px;
+    height: 90px;
+}
+
+.b1 {
+    animation-delay: 0.2s;
+}
+
+.b2 {
+    animation-delay: 0.5s;
+    width: 70px;
+}
+
+.royal-doli {
+    width: 180px;
+    height: 130px;
+    margin-left: 20px;
+}
+
+.gold-silhouette,
+.gold-silhouette-detailed {
+    width: 100%;
+    height: 100%;
+    fill: url(#goldGradient);
+}
+
+.gold-silhouette path,
+.gold-silhouette circle {
+    fill: var(--gold-primary);
+    stroke: var(--gold-primary);
+}
+
+.gold-silhouette-detailed path,
+.gold-silhouette-detailed circle {
+    fill: var(--gold-primary);
+    stroke: var(--gold-shiny);
+}
+
+@keyframes walkBounce {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-5px) rotate(1deg);
+    }
+}
+
+/* Beautiful Sparkle Overlays */
+.magic-sparkles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.sparkle {
+    position: absolute;
+    color: var(--gold-primary);
+    font-size: 1.5rem;
+    filter: drop-shadow(0 0 8px var(--gold-shiny));
+    animation: twinkleSparkle 2s ease-in-out infinite alternate;
+}
+
+.magic-sparkles .sparkle:nth-child(1) {
+    top: 20%;
+    left: 30%;
+    animation-delay: 0.1s;
+    font-size: 2rem;
+}
+
+.magic-sparkles .sparkle:nth-child(2) {
+    top: 60%;
+    left: 70%;
+    animation-delay: 0.5s;
+    font-size: 1rem;
+}
+
+.magic-sparkles .sparkle:nth-child(3) {
+    top: 30%;
+    left: 80%;
+    animation-delay: 0.8s;
+    font-size: 1.8rem;
+}
+
+.magic-sparkles .sparkle:nth-child(4) {
+    top: 70%;
+    left: 20%;
+    animation-delay: 1.2s;
+    font-size: 1.2rem;
+}
+
+@keyframes cinematicSweep {
+    0% {
+        transform: translateX(120%);
+    }
+
+    100% {
+        transform: translateX(-120%);
+    }
+}
+
+@keyframes luxuriousFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(1deg);
+    }
+}
+
+@keyframes twinkleSparkle {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2) rotate(45deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.5) rotate(90deg);
+    }
+}
+
+/* Mandala Corners for Royal Theme */
+.mandala {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+    opacity: 0.15;
+    /* Soft maroon mandala SVG */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23800000' d='M50 0 C60 30, 70 40, 100 50 C70 60, 60 70, 50 100 C40 70, 30 60, 0 50 C30 40, 40 30, 50 0 Z'/%3E%3Cpath fill='none' stroke='%23D4AF37' stroke-width='2' d='M50 15 A 35 35 0 1 0 50 85 A 35 35 0 1 0 50 15 Z'/%3E%3C/svg%3E");
+    animation: rotateSlowly 90s linear infinite;
+}
+
+.m-top-left {
+    top: -80px;
+    left: -80px;
+}
+
+.m-top-right {
+    top: -80px;
+    right: -80px;
+    animation-direction: reverse;
+}
+
+.m-bottom-left {
+    bottom: -80px;
+    left: -80px;
+    animation-direction: reverse;
+}
+
+.m-bottom-right {
+    bottom: -80px;
+    right: -80px;
+}
+
+/* Common Section */
+section {
+    padding: 7rem 2rem;
+    position: relative;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+
+/* Family Cards */
+.family-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.family-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 6px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.6), rgba(255, 248, 231, 0.8), rgba(212, 175, 55, 0.6));
+    box-shadow: 0 20px 40px rgba(128, 0, 0, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-border {
+    background: var(--ivory-main);
+    padding: 3.5rem 2rem;
+    border-radius: 12px;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+/* Decorative Card Corners */
+.card-corner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--gold-primary);
+}
+
+.cc-tl {
+    top: 10px;
+    left: 10px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.cc-br {
+    bottom: 10px;
+    right: 10px;
+    border-left: none;
+    border-top: none;
+}
+
+.card-border h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-line {
+    width: 60px;
+    height: 3px;
+    background: var(--gold-primary);
+    margin: 0 auto 2rem;
+}
+
+/* Events Timeline Customization for Maroon Background */
+.events {
+    background-image: radial-gradient(circle at center, #8a0c0c 0%, #660000 100%);
+    position: relative;
+}
+
+.events::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' fill='%23D4AF37' fill-opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+.event-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.event-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: linear-gradient(to bottom, transparent, var(--gold-primary), transparent);
+    transform: translateX(-50%);
+}
+
+.day-title {
+    font-size: 2.2rem;
+    color: var(--ivory-main);
+    background: var(--maroon-primary);
+    display: inline-block;
+    padding: 15px 40px;
+    border: 2px solid var(--gold-primary);
+    border-radius: 5px;
+    margin: 0 auto 4rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.timeline-items {
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.event-time {
+    width: 40%;
+    text-align: right;
+    font-size: 1.8rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.timeline-item:nth-child(odd) .event-time {
+    text-align: left;
+}
+
+.timeline-item::before {
+    content: '❖';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--gold-shiny);
+    font-size: 2rem;
+    background: var(--maroon-primary);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid var(--gold-primary);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.event-details {
+    width: 45%;
+    background: var(--ivory-main);
+    color: var(--text-dark);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border-left: 6px solid var(--gold-primary);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-item:nth-child(odd) .event-details {
+    border-left: none;
+    border-right: 6px solid var(--gold-primary);
+    text-align: right;
+}
+
+.event-details h4 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.special-event .event-details {
+    border: 3px solid var(--gold-primary);
+    background: linear-gradient(135deg, var(--ivory-main) 0%, #FFF0D4 100%);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
+
+/* Venue */
+.venue-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.venue-card {
+    background: #fff;
+    padding: 4.5rem;
+    border-radius: 15px;
+    border: 2px solid var(--gold-primary);
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(128, 0, 0, 0.1);
+    position: relative;
+}
+
+.inviter-list {
+    margin-top: 1.5rem;
+    font-family: var(--font-shloka);
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.inviter-list p {
+    margin-bottom: 0.8rem;
+}
+
+/* Buttons */
+.btn-royal {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 40px;
+    background: linear-gradient(135deg, var(--maroon-primary), #660000);
+    color: var(--gold-shiny) !important;
+    border: 2px solid var(--gold-primary);
+    border-radius: 50px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 20px rgba(128, 0, 0, 0.2);
+}
+
+.btn-royal:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(128, 0, 0, 0.3);
+    color: #fff !important;
+}
+
+/* Footer */
+footer {
+    background: var(--maroon-primary);
+    background-image: radial-gradient(circle at center, #660000 0%, #4A0000 100%);
+    border-top: 5px solid var(--gold-primary);
+    color: var(--gold-light);
+    text-align: center;
+    padding: 6rem 1rem 4rem;
+    position: relative;
+}
+
+.footer-names {
+    color: var(--gold-shiny);
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Environment Particles (Gold Flakes) */
+#particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    background: linear-gradient(135deg, var(--gold-shiny), var(--gold-primary));
+    border-radius: 2px;
+    box-shadow: 0 0 5px var(--gold-primary);
+    animation: driftDownwards linear infinite;
+}
+
+/* Dynamic Animations */
+@keyframes driftDownwards {
+    0% {
+        transform: translateY(-10vh) translateX(0) scale(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.9;
+        transform: translateY(20vh) translateX(var(--drift)) scale(1) rotate(45deg);
+    }
+
+    80% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(110vh) translateX(calc(var(--drift) * -1)) scale(0.5) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+@keyframes elegantEmerge {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes smoothSlideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes smoothSlideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes floatingObjects {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(2deg);
+    }
+}
+
+@keyframes dropIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes subtleFloat {
+    from {
+        transform: translateY(-10px);
+    }
+
+    to {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes rotateSlowly {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.4));
+    }
+
+    50% {
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.8));
+    }
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1.05);
+    }
+
+    14% {
+        transform: scale(1.1);
+    }
+
+    28% {
+        transform: scale(1.05);
+    }
+
+    42% {
+        transform: scale(1.1);
+    }
+
+    70% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes bounce-anim {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Sound Waves for Shehnai */
+.sound-waves {
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    display: flex;
+    gap: 4px;
+    align-items: flex-end;
+    height: 30px;
+}
+
+.sound-waves span {
+    display: block;
+    width: 4px;
+    background: var(--gold-primary);
+    border-radius: 2px;
+    animation: soundWavePlay 1.2s infinite ease-in-out;
+}
+
+.sound-waves span:nth-child(1) {
+    height: 10px;
+    animation-delay: 0s;
+}
+
+.sound-waves span:nth-child(2) {
+    height: 20px;
+    animation-delay: 0.2s;
+}
+
+.sound-waves span:nth-child(3) {
+    height: 30px;
+    animation-delay: 0.4s;
+}
+
+@keyframes soundWavePlay {
+
+    0%,
+    100% {
+        transform: scaleY(0.5);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+/* CSS Hooks for Observer revealing with styles */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s ease-out;
+}
+
+.reveal-slide-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all 1s ease-out;
+}
+
+.reveal-slide-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 1s ease-out;
+}
+
+.reveal-slide-up {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s ease-out;
+}
+
+.active.reveal,
+.active.reveal-slide-up,
+.active.reveal-slide-left,
+.active.reveal-slide-right {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Dynamic Animations triggers on hover/view */
+.hover-lift {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.wiggle-on-hover {
+    transition: transform 0.3s;
+}
+
+.wiggle-on-hover:hover {
+    transform: scale(1.03) rotate(-1deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .names {
+        font-size: 3.5rem;
+    }
+
+    .marathi-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .marathi-title {
+        font-size: 1.8rem;
+    }
+
+    .marathi-text {
+        font-size: 1rem;
+    }
+
+    .ganesh-icon-god {
+        width: 150px;
+    }
+
+    .marathi-title.section-title {
+        font-size: 3rem;
+    }
+
+    .inviter-list {
+        font-size: 1.15rem;
+        line-height: 1.6;
+    }
+
+    .event-timeline::before {
+        left: 40px;
+    }
+
+    .day-title {
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(odd) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 80px;
+    }
+
+    .timeline-item::before {
+        left: 40px;
+        top: 0;
+        transform: translate(-50%, -20px);
+    }
+
+    .event-time,
+    .timeline-item:nth-child(odd) .event-time {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .event-details,
+    .timeline-item:nth-child(odd) .event-details {
+        width: 100%;
+        text-align: left;
+        border-right: none;
+        border-left: 6px solid var(--gold-primary);
+    }
+
+    .doli-img,
+    .band-img {
+        height: 100px;
+    }
+
+    .family-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .names-wrapper::before,
+    .names-wrapper::after {
+        display: none;
+    }
+}
